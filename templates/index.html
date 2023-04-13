@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DODO Admin</title>
+    <link href="//db.onlinewebfonts.com/c/9b424ab5e96ee96f675c922ff9c6aff3?family=Dodo+Rounded" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<header>
+    <div class="dodo-logo"></div>
+    <h1>АДМИН</h1>
+</header>
+<body>
+    <h2>Пройденные тренинги</h2>
+    <table>
+        <tr>
+            <td>№</td>
+            <td>Пользователь</td>
+            <td>Тренинг</td>
+            <td>Результат</td>
+            <td>Время прохождения</td>
+        </tr>
+        {% for el in data %}
+        <tr>
+            <td>{{el.id}}</td>
+            <td>@{{el.username}}</td>
+            <td>{{el.onboarding_type}}</td>
+            <td>{{el.result}}</td>
+            <td>{{el.time.strftime("%Y-%m-%d %H:%M:%S")}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+<h2>Изменить тренинги</h2>
+    <h3>Курьер</h3>
+    <table>
+        <tr>
+            <td>№</td>
+            <td>Вопрос</td>
+            <td>Ответ</td>
+        </tr>
+        {% for el in data2 %}
+        <tr>
+            <td>{{el.id}}</td>
+            <td>{{el.question}}</td>
+            <td>{{el.answer}}</td>
+            <td><a href="/edit_courier/{{el.id}}">Изменить</a></td>
+            <td><a href="/delete_record_courier/{{el.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_record_courier">Добавить вопрос</a>
+    <h3>Пиццамейкер</h3>
+    <table>
+        <tr>
+            <td>№</td>
+            <td>Вопрос</td>
+            <td>Ответ</td>
+        </tr>
+        {% for el in data3 %}
+        <tr>
+            <td>{{el.id}}</td>
+            <td>{{el.question}}</td>
+            <td>{{el.answer}}</td>
+            <td><a href="/edit_pizzamaker/{{el.id}}">Изменить</a></td>
+            <td><a href="/delete_record_pizzamaker/{{el.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_record_pizzamaker">Добавить вопрос</a>
+    <h3>Менеджер</h3>
+    <table>
+        <tr>
+            <td>№</td>
+            <td>Вопрос</td>
+            <td>Ответ</td>
+        </tr>
+        {% for el in data4 %}
+        <tr>
+            <td>{{el.id}}</td>
+            <td>{{el.question}}</td>
+            <td>{{el.answer}}</td>
+            <td><a href="/edit_manager/{{el.id}}">Изменить</a></td>
+            <td><a href="/delete_record_manager/{{el.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_record_manager">Добавить вопрос</a>
+    <h3>Управляющий</h3>
+    <table>
+        <tr>
+            <td>№</td>
+            <td>Вопрос</td>
+            <td>Ответ</td>
+        </tr>
+        {% for el in data5 %}
+        <tr>
+            <td>{{el.id}}</td>
+            <td>{{el.question}}</td>
+            <td>{{el.answer}}</td>
+            <td><a href="/edit_admin/{{el.id}}">Изменить</a></td>
+            <td><a href="/delete_record_admin/{{el.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/add_record_admin">Добавить вопрос</a>
+</body>
+</html>
