@@ -1,5 +1,4 @@
 # dodoPizzaBot
-![image](https://github.com/user-attachments/assets/bf421748-f0ed-4c4a-b101-b924e5c5f945)
 ![image](https://github.com/user-attachments/assets/863a17b0-2220-45c3-90c2-5581b7af2b44)
 Тг-бот + админ-панель для онбординга и обучения новых сотрудников сети пиццерий Додо пицца. Проект разработан в рамках хакатона CodeRocks 2023. Отмечен жюри специальным призом.
 ## Техническое задание
